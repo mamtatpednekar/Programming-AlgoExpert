@@ -1,0 +1,15 @@
+def isValidSubsequence(array, sequence):
+    # Write your code here.
+	seq = 0
+	i = 0
+	j = 0
+	while i<len(sequence) and j<len(array):
+		if sequence[i] == array[j]:
+			seq = seq + 1
+			i+=1
+			j+=1
+		else:
+			j+=1
+	if len(sequence)==seq:
+		return True
+	return False
