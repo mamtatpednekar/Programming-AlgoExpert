@@ -1,0 +1,26 @@
+def isMonotonic(array):
+    # Write your code here.
+	if len(array)<=2:
+		return True
+	
+	
+	for i in range(0,len(array)):
+		if array[i]==array[i+1] and array[i+1]!=array[i+2]:
+			continue
+			
+		elif array[i+1]<=array[i]:
+			for j in range(i,len(array)-1):
+				if(array[j+1]>array[j]):
+					return False
+			return True
+		
+			
+		elif array[i+1]>=array[i]:
+			for j in range(i,len(array)-1):
+				if(array[j+1]<array[j]):
+					return False
+			return True
+		
+		
+		
+			
