@@ -1,0 +1,24 @@
+
+def tournamentWinner(competitions, results):
+    # Write your code here.
+    currentBestTeam = ""
+    scores = {currentBestTeam : 0}
+
+    for idx, competition in enumerate(competitions):
+        result = results[idx]
+        homeTeam, awayTeam = competition
+        winner = homeTeam if result == 1 else awayTeam
+
+        updateScore(winner, scores)
+
+        if scores[winner] > scores[currentBestTeam]:
+            currentBestTeam = winner
+           
+
+    
+    return currentBestTeam
+
+def updateScore(team, scores):
+    if team not in scores:
+        scores[team] = 0
+    scores[team] += 3
