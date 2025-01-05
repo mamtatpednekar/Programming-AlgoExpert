@@ -1,0 +1,7 @@
+def isPalindrome(string):
+    # Write your code here.
+    reverseString = string[::-1]
+    if string == reverseString:
+        return True
+    return False
+    pass
