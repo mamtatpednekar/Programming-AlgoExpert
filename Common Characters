@@ -1,0 +1,17 @@
+def commonCharacters(strings):
+    # Write your code here.
+    characterCounts = {}
+    finalCharacters = []
+    for string in strings:
+        allCharacters = set(string)
+        for character in allCharacters:
+            if character not in characterCounts:
+                characterCounts[character] = 0
+            characterCounts[character] += 1
+
+
+    for character, count in characterCounts.items():
+        if count == len(strings):
+            finalCharacters.append(character)
+    return finalCharacters
+            
