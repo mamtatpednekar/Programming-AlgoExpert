@@ -1,0 +1,13 @@
+def generateDocument(characters, document):
+    # Write your code here.
+    allCharacterCounts = {}
+    for character in characters:
+        if character not in allCharacterCounts:
+            allCharacterCounts[character] = 0
+        allCharacterCounts[character] += 1
+
+    for character in document:
+        if allCharacterCounts[character] == 0 or character not in allCharacterCounts:
+            return False
+        allCharacterCounts[character] -= 1   
+    return True
