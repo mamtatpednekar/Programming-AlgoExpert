@@ -11,3 +11,18 @@ def generateDocument(characters, document):
             return False
         allCharacterCounts[character] -= 1   
     return True
+
+
+#2
+def generateDocument(characters, document):
+    # Write your code here.
+    characterSet = list(characters)
+    documentSet = list(document)
+
+    for character in documentSet:
+        if character in characterSet:
+            characterSet.remove(character)
+        else:
+            return False
+    return True
+
