@@ -3,7 +3,7 @@ def generateDocument(characters, document):
     allCharacterCounts = {}
     for character in characters:
         if character not in allCharacterCounts:
-            allCharacterCounts[character] = 0
+            allCharacterCounts[character] = 1
         allCharacterCounts[character] += 1
 
     for character in document:
