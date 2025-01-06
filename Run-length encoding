@@ -1,0 +1,19 @@
+def runLengthEncoding(string):
+    # Write your code here.
+    allCombinations = []
+    counter = 1
+
+    for i in range(1, len(string)):
+        previousCharacter = string[i-1]
+        currentCharacter = string[i]
+
+        if currentCharacter != previousCharacter or counter == 9:
+            allCombinations.append(str(counter))
+            allCombinations.append(previousCharacter)
+            counter = 0
+        counter += 1
+
+    allCombinations.append(str(counter))
+    allCombinations.append(string[len(string)-1])
+
+    return "".join(allCombinations)
